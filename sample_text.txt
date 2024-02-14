@@ -1,0 +1,4 @@
+This is a sample text file.
+It contains some sample words for testing.
+The purpose is to demonstrate the wordCount function.
+Each line has different words.
