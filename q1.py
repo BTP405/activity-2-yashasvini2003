@@ -1,20 +1,28 @@
+   # Helper function to check if a number is prime.
 def is_prime(num):
-    """Helper function to check if a number is prime."""
+    # If the number is less than 2, it's not prime
     if num < 2:
         return False
+    # Loop through potential divisors from 2 to the square root of the number
     for i in range(2, int(num**0.5) + 1):
+        # If the number is divisible by any number in this range, it's not prime
         if num % i == 0:
             return False
+    # If the number is not divisible by any number in the range, it's prime
     return True
 
+# Returns a list containing all prime numbers between 2 and n.
 def getPrimeNumbers(n):
-    """Returns a list containing all prime numbers between 2 and n."""
+    # Iterate through numbers from 2 to n (inclusive) and filter out non-prime numbers
     return [num for num in range(2, n + 1) if is_prime(num)]
 
 # Example usage:
 n = 20
+# Get the prime numbers up to n
 prime_numbers = getPrimeNumbers(n)
+# Print the prime numbers between 2 and n
 print(f"Prime numbers between 2 and {n}: {prime_numbers}")
+
 
 
 # - Can you avoid a function call?
